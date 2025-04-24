@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2025 at 04:57 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Apr 24, 2025 at 03:28 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `skodata`
+-- Database: `mydata`
 --
 
 -- --------------------------------------------------------
@@ -43,10 +43,8 @@ CREATE TABLE `dateta` (
 --
 
 INSERT INTO `dateta` (`id`, `snam`, `edz`, `genda`, `ress`, `nmber`, `kalids`, `prgram`) VALUES
-(1, 'Fredian Mherl', 28, 'Male', 'Basac', '09102410584', 'CTECH', 'BSIT-ELECT'),
-(4, 'Erl Briones', 67, 'Male', 'Loon', '09123456788', 'CTECH', 'BSIT-ELECT'),
-(6, 'Joel Murcia Jr', 42, 'Male', 'Maribojoc', '0921436587', 'CTE', 'BEED'),
-(7, 'Jorge Manuel Soriano', 23, 'Male', 'Calape', '09217652309', 'COF', 'BS-FISHERIES');
+(9, 'Vince Francis. B. Olaivar', 20, 'Male', 'Basdacu, Loon', '09422939011', 'CTECH', 'BSCS'),
+(10, 'Aaron', 45, 'Male', 'Loon', '7483734', 'CTECH', 'BSCS');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +66,7 @@ ALTER TABLE `dateta`
 -- AUTO_INCREMENT for table `dateta`
 --
 ALTER TABLE `dateta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
