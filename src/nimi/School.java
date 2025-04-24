@@ -17,9 +17,7 @@ import java.awt.event.ActionListener;
 
 public class School extends javax.swing.JFrame {
 
-    /**
-     * Creates new form iskwelahan
-     */
+  
     public School() {
         initComponents();
     }
@@ -81,11 +79,14 @@ public class School extends javax.swing.JFrame {
         jPanel2.add(num, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 280, 30));
 
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 51));
         jRadioButton1.setText("Male");
         jPanel2.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, 100, -1));
 
         buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 102));
         jRadioButton2.setText("Female");
+        jRadioButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanel2.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, -1, -1));
         jPanel2.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 280, 30));
         jPanel2.add(edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 80, 30));
@@ -177,18 +178,22 @@ public class School extends javax.swing.JFrame {
         jPanel2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 100, 40));
 
         jLabel1.setFont(new java.awt.Font("Sitka Small", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 51));
         jLabel1.setText("CONTACT NUMBER");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 150, 20));
 
         jLabel2.setFont(new java.awt.Font("Sitka Small", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 51));
         jLabel2.setText("NAME");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 60, 50, 20));
 
         jLabel3.setFont(new java.awt.Font("Sitka Small", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 51));
         jLabel3.setText("AGE");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 40, 20));
 
         jLabel4.setFont(new java.awt.Font("Sitka Small", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 51));
         jLabel4.setText("ADDRESS");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 80, 20));
 
@@ -267,7 +272,7 @@ public class School extends javax.swing.JFrame {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Connect to database
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/skodata?useSSL=false", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydata?useSSL=false", "root", "");
 
             // SQL Insert
             String sql = "INSERT INTO dateta (snam, edz, genda, ress, nmber, kalids, prgram) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -319,7 +324,7 @@ public class School extends javax.swing.JFrame {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/skodata?useSSL=false", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydata?useSSL=false", "root", "");
 
             String sql = "SELECT * FROM dateta";  // Select all data from the table
             PreparedStatement pst = con.prepareStatement(sql);
@@ -387,7 +392,7 @@ public class School extends javax.swing.JFrame {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/skodata?useSSL=false", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydata?useSSL=false", "root", "");
 
             String sql = "UPDATE dateta SET snam=?, edz=?, genda=?, ress=?, nmber=?, kalids=?, prgram=? WHERE id=?";
             PreparedStatement pst = con.prepareStatement(sql);
@@ -440,7 +445,7 @@ public class School extends javax.swing.JFrame {
         if (confirm == JOptionPane.YES_OPTION) {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/skodata?useSSL=false", "root", "");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydata?useSSL=false", "root", "");
 
                 String sql = "DELETE FROM dateta WHERE id=?";
                 PreparedStatement pst = con.prepareStatement(sql);
